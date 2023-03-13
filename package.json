@@ -1,18 +1,21 @@
 {
-  "name": "@purplepay/sdk",
-  "version": "1.2.7",
+  "name": "@purple-pay/sdk",
+  "version": "0.1.0",
   "description": "Purple Pay SDK",
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
   "module": "build/module/index.js",
-  "repository": "https://github.com/Abhikumar98/purple-pay-sdk",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abhikumar98/purple-pay-sdk.git"
+  },
   "license": "MIT",
   "keywords": [],
   "author": "Abhishek Kumar",
   "publishConfig": {
     "access": "public"
   },
-   "homepage": "https://github.com/Abhikumar98/purple-pay-sdk",
+  "homepage": "https://github.com/Abhikumar98/purple-pay-sdk",
   "scripts": {
     "watch": "tsc -w -p ./tsconfig.json",
     "build": "run-p build:*",
@@ -107,5 +110,8 @@
     "exclude": [
       "**/*.spec.js"
     ]
+  },
+  "bugs": {
+    "url": "https://github.com/Abhikumar98/purple-pay-sdk/issues"
   }
 }
