@@ -1,6 +1,6 @@
 {
-  "name": "sdk",
-  "version": "1.0.0",
+  "name": "@abhikumar_98/sdk",
+  "version": "1.2.7",
   "description": "Purple Pay SDK",
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
@@ -8,7 +8,11 @@
   "repository": "https://github.com/Abhikumar98/sdk",
   "license": "MIT",
   "keywords": [],
+  "author": {
+    "name": "Abhikumar98"
+  },
   "scripts": {
+    "watch": "tsc -w -p ./tsconfig.json",
     "build": "run-p build:*",
     "build:main": "tsc -p tsconfig.json",
     "build:module": "tsc -p tsconfig.module.json",
@@ -18,7 +22,6 @@
     "test": "run-s build test:*",
     "test:lint": "eslint src --ext .ts",
     "test:prettier": "prettier \"src/**/*.ts\" --list-different",
-    "test:spelling": "cspell \"{README.md,.github/*.md,src/**/*.ts}\"",
     "test:unit": "nyc --silent ava",
     "check-cli": "run-s test diff-integration-tests check-integration-tests",
     "check-integration-tests": "run-s check-integration-test:*",
@@ -36,12 +39,16 @@
     "doc:publish": "gh-pages -m \"[ci skip] Updates\" -d build/docs",
     "version": "standard-version",
     "reset-hard": "git clean -dfx && git reset --hard && yarn",
-    "prepare-release": "run-s reset-hard test cov:check doc:html version doc:publish"
+    "prepare-release": "run-s reset-hard test cov:check doc:html version doc:publish",
+    "local": "ts-node src/index.ts"
   },
   "engines": {
     "node": ">=10"
   },
-  "dependencies": {},
+  "dependencies": {
+    "ethers": "^5.7.2",
+    "qr-code-styling": "^1.6.0-rc.1"
+  },
   "devDependencies": {
     "@ava/typescript": "^1.1.1",
     "@istanbuljs/nyc-config-typescript": "^1.0.1",
@@ -49,7 +56,6 @@
     "@typescript-eslint/parser": "^4.0.1",
     "ava": "^3.12.1",
     "codecov": "^3.5.0",
-    "cspell": "^4.1.0",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^7.8.0",
     "eslint-config-prettier": "^6.11.0",
@@ -62,7 +68,7 @@
     "open-cli": "^6.0.1",
     "prettier": "^2.1.1",
     "standard-version": "^9.0.0",
-    "ts-node": "^9.0.0",
+    "ts-node": "^10.9.1",
     "typedoc": "^0.19.0",
     "typescript": "^4.0.2"
   },
