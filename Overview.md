@@ -11,7 +11,7 @@ d. The transaction is sent and confirmed by the wallet.
 e. The wallet calls the redirect URL to inform about the transaction completion.
 f. The merchant server discovers and verifies the transaction.
 
-![Something](https://github.com/Abhikumar98/purple-pay-sdk/blob/main/src/images/webapp.jpeg?raw=true)
+![Something](https://github.com/Abhikumar98/purple-pay-sdk/blob/main/src/images/merchant.jpeg?raw=true)
 
 ## Web App to Browser Wallet:
 
@@ -21,4 +21,4 @@ c. Customer approves the request in the browser.
 d. The transaction is sent and confirmed by the wallet.
 e. The wallet informs the Web App by returning transaction hash.
 
-![Something](https://github.com/Abhikumar98/purple-pay-sdk/blob/main/src/images/merchant.jpeg?raw=true)
+![Something](https://github.com/Abhikumar98/purple-pay-sdk/blob/main/src/images/webapp.jpeg?raw=true)
