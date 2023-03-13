@@ -8,9 +8,11 @@
   "repository": "https://github.com/Abhikumar98/purple-pay-sdk",
   "license": "MIT",
   "keywords": [],
-  "author": {
-    "name": "Abhikumar98"
+  "author": "Abhishek Kumar",
+  "publishConfig": {
+    "access": "public"
   },
+   "homepage": "https://github.com/Abhikumar98/purple-pay-sdk",
   "scripts": {
     "watch": "tsc -w -p ./tsconfig.json",
     "build": "run-p build:*",
