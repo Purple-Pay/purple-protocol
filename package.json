@@ -7,7 +7,7 @@
   "module": "build/module/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Abhikumar98/purple-pay-sdk.git"
+    "url": "git+https://github.com/Purple-Pay/sdk.git"
   },
   "license": "MIT",
   "keywords": [],
@@ -15,7 +15,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "homepage": "https://github.com/Abhikumar98/purple-pay-sdk",
+  "homepage": "https://github.com/Purple-Pay/sdk",
   "scripts": {
     "watch": "tsc -w -p ./tsconfig.json",
     "build": "run-p build:*",
