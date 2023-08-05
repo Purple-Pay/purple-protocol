@@ -1,5 +1,5 @@
 import { ETHEREUM_PROTOCOL, TRANSFER_METHOD } from '../constants';
-import { chainIdMap, TransferRequestURLFields } from '../types';
+import { TransferRequestURLFields } from '../types';
 
 /**
  * Encode a Purple Pay transfer request URL.
@@ -25,7 +25,7 @@ const encodeERC20TransactionRequestURL = ({
   message,
   chainId,
 }: TransferRequestURLFields): URL => {
-  const baseURL = `${ETHEREUM_PROTOCOL}${tokenAddress}@${chainIdMap[chainId]}/${TRANSFER_METHOD}`;
+  const baseURL = `${ETHEREUM_PROTOCOL}${tokenAddress}@${chainId}/${TRANSFER_METHOD}`;
 
   const url = new URL(baseURL);
 
@@ -34,6 +34,8 @@ const encodeERC20TransactionRequestURL = ({
   url.searchParams.append('redirectURL', redirectURL);
   url.searchParams.append('label', label);
   url.searchParams.append('message', message);
+
+  console.log(`Generated URL: ${url}`);
 
   return url;
 };
@@ -52,7 +54,7 @@ const encodeNativeTransferRequestURL = ({
   message,
   chainId,
 }: TransferRequestURLFields): URL => {
-  const baseURL = `${ETHEREUM_PROTOCOL}${recipient}@${chainIdMap[chainId]}`;
+  const baseURL = `${ETHEREUM_PROTOCOL}${recipient}@${chainId}`;
 
   const url = new URL(baseURL);
 
@@ -60,6 +62,8 @@ const encodeNativeTransferRequestURL = ({
   url.searchParams.append('label', label);
   url.searchParams.append('message', message);
   url.searchParams.append('redirectURL', redirectURL);
+
+  console.log(`Generated URL: ${url}`);
 
   return url;
 };

@@ -20,7 +20,7 @@ export type TransferRequestURLFields = {
   readonly redirectURL?: string;
   readonly label?: string;
   readonly message?: string;
-  readonly chainId: keyof typeof chainIdMap;
+  readonly chainId: number;
 };
 
 export type Providers =
