@@ -20,9 +20,6 @@ const encodeERC20TransactionRequestURL = ({
   recipient,
   amount,
   tokenAddress,
-  redirectURL,
-  label,
-  message,
   chainId,
 }: TransferRequestURLFields): URL => {
   const baseURL = `${ETHEREUM_PROTOCOL}${tokenAddress}@${chainId}/${TRANSFER_METHOD}`;
@@ -31,9 +28,6 @@ const encodeERC20TransactionRequestURL = ({
 
   url.searchParams.append('address', recipient);
   url.searchParams.append('uint256', amount.toString());
-  url.searchParams.append('redirectURL', redirectURL);
-  url.searchParams.append('label', label);
-  url.searchParams.append('message', message);
 
   console.log(`Generated URL: ${url}`);
 
@@ -49,9 +43,6 @@ const encodeERC20TransactionRequestURL = ({
 const encodeNativeTransferRequestURL = ({
   recipient,
   amount,
-  redirectURL,
-  label,
-  message,
   chainId,
 }: TransferRequestURLFields): URL => {
   const baseURL = `${ETHEREUM_PROTOCOL}${recipient}@${chainId}`;
@@ -59,9 +50,6 @@ const encodeNativeTransferRequestURL = ({
   const url = new URL(baseURL);
 
   url.searchParams.append('value', amount.toString());
-  url.searchParams.append('label', label);
-  url.searchParams.append('message', message);
-  url.searchParams.append('redirectURL', redirectURL);
 
   console.log(`Generated URL: ${url}`);
 

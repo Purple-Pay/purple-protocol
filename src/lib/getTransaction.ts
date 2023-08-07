@@ -1,6 +1,6 @@
 import { providers } from 'ethers';
 
-import { chainIdMap, Providers } from '../types';
+import { Providers } from '../types';
 
 import { getProvider } from './utils';
 
@@ -13,7 +13,7 @@ import { getProvider } from './utils';
 
 export const getTransaction = async (
   id: string,
-  chainId: keyof typeof chainIdMap,
+  chainId: number,
   provider?: Providers
 ): Promise<providers.TransactionResponse> => {
   const currentProvider = getProvider(chainId, provider);

@@ -2,10 +2,7 @@ import { ethers } from 'ethers';
 
 import { chainIdMap, Providers, rpcMap } from '../types';
 
-export const getProvider = (
-  chainId: keyof typeof chainIdMap,
-  provider?: Providers
-) => {
+export const getProvider = (chainId: number, provider?: Providers) => {
   const currentProvider = provider
     ? provider
     : typeof window !== 'undefined'
