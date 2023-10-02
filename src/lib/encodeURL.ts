@@ -22,14 +22,15 @@ const encodeERC20TransactionRequestURL = ({
   tokenAddress,
   chainId,
 }: TransferRequestURLFields): URL => {
-  const baseURL = `${ETHEREUM_PROTOCOL}${tokenAddress}@${chainId}/${TRANSFER_METHOD}`;
+  const baseURL = `${ETHEREUM_PROTOCOL}${tokenAddress}/${TRANSFER_METHOD}`;
 
   const url = new URL(baseURL);
 
   url.searchParams.append('address', recipient);
   url.searchParams.append('uint256', amount.toString());
+  url.searchParams.append('chain_id', chainId.toString());
 
-  console.log(`Generated URL: ${url}`);
+  console.info(`Generated URL: ${url}`);
 
   return url;
 };
@@ -51,7 +52,7 @@ const encodeNativeTransferRequestURL = ({
 
   url.searchParams.append('value', amount.toString());
 
-  console.log(`Generated URL: ${url}`);
+  console.info(`Generated URL: ${url}`);
 
   return url;
 };

@@ -1,0 +1,45 @@
+[
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "purplePay",
+        "type": "address"
+      }
+    ],
+    "name": "PurpleProtocolDeployed",
+    "type": "event"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_ownerAddress",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_commissionFee",
+        "type": "uint256"
+      }
+    ],
+    "name": "deployPurpleProtocol",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]

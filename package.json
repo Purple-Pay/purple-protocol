@@ -1,6 +1,6 @@
 {
   "name": "@purple-pay/sdk",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Purple Pay SDK",
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
@@ -50,8 +50,11 @@
     "node": ">=10"
   },
   "dependencies": {
-    "ethers": "^5.7.2",
-    "qr-code-styling": "^1.6.0-rc.1"
+    "@types/react": "^18.2.24",
+    "ethers": "^5",
+    "qr-code-styling": "^1.6.0-rc.1",
+    "react": "^18.2.0",
+    "wagmi": "^0.12.17"
   },
   "devDependencies": {
     "@ava/typescript": "^1.1.1",
