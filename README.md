@@ -72,16 +72,7 @@ This parameter is decoded and shown to the user by the wallet for additional con
 message should be a URL-encoded UTF-8 string that describes the details of the transfer request.
 
 This may contain item details, order details, acknowledgement of transaction completion for additional context.
-Collapse
-message.txt
-3 KB
 This parameter is decoded and shown to the user by the wallet for additional context vis-a-vis the recipient/merchant
-
-### Message
-
-message should be a URL-encoded UTF-8 string that describes the details of the transfer request.
-
-This may contain item details, order details, acknowledgement of transaction completion for additional context.
 
 ### Chain Id
 
